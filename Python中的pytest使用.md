@@ -98,6 +98,29 @@
 
 -- 分布式并发测试用例  pip install pytest-xdist 或 pip install pytest-parallel
 
+-- 出错立即返回  pip install pytest-instafail
 
+-- 参数化
+  `import pytest 
+  
+   def fun():
+   
+       return "Hello world"
+       
+   @pytest.fixture()  # 添加fixture后执行inty 方法就是执行fun()方法
+   
+   def inty():
+   
+       return "connect to " + fun()
+       
+   Class TestCase():
+   
+       # inty 参数名必须同fixture的inty方法名相同才能传递inty的值
+       
+       def test_open_baidu(self, inty):
+       
+           print ("=========={}".format(inty))
+
+  `
 
 
