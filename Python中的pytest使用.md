@@ -58,4 +58,38 @@
 
 --xfail : 预期失败执行也失败
 
+### 理论部分
+
+* 文件、 包、 类、 函数编写规则
+
+-- 文件或（包） ： 必须以test_开头 或者以_test结尾
+
+-- 类 ： 必须以Test 开头， 且不含有init 方法
+
+-- 函数/方法  ： 必须以 test_开头
+
+* 断言 方法： assert
+
+-- assert aa : 判断aa为真
+
+-- assert not aa : 判断aa不为真
+
+-- assert a in b : 判断b包含a
+
+-- assert a==b : 判断a等于b
+
+-- assert a！=b : 判断a不等于b
+
+-- 另外， 如果断言后有错误的，想给出友好提示，可以使用以下方式
+
+-- assert 5 == add(4,4), "add()方法结果不等于5，而等于{0}".format(add(4,4))
+
+* 相关使用
+
+-- 重复执行失败用例  pip install pytest-rerunfailures
+
+-- 使用示例 ： pytest test.py --reruns 3
+
+-- 
+
 
