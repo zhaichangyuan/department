@@ -8,7 +8,7 @@
 
 ### 简单的测试
 
-* 新建  test_sample.py
+* 1、新建  test_sample.py
 
   `def inc(x): 
   
@@ -18,3 +18,24 @@
     
         assert inc(3) == 5 
  `
+ 
+* 在test_sample.py 文件的目录下，执行pytest命令， pytest 将运行当前目录及其子目录下所有名称为test_*.py  或者 *_test.py 的文件
+
+* assert 断言 语句验证测试期望值，pytest中有一种断言反思机制，可以智能报告assert表达式的中间值
+
+* 2、创建文件名  ：  test_001.py
+
+
+`def fun(a):
+
+    rerurn a + 1
+    
+ def test_001():
+ 
+    assert fun(2) == 3
+    
+ def test_002():
+    
+    assert fun(2) == 4
+    
+`
