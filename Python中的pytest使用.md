@@ -90,6 +90,14 @@
 
 -- 使用示例 ： pytest test.py --reruns 3
 
--- 
+-- 测试报告： pip install pytest-html
+
+-- 使用示例 pytest test.py --html=./testreport.html
+
+-- 顺序 随机测试  pip install pytest-randomly
+
+-- 分布式并发测试用例  pip install pytest-xdist 或 pip install pytest-parallel
+
+
 
 
